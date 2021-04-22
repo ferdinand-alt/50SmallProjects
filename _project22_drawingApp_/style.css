@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(128, 45, 211);
+}
+
+canvas {
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4) ;
+}
+
+.toolbox {
+    background-color: rgb(137, 64, 210);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    width: 800px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* alle directe children of Toolbox */
+.toolbox > * {
+    background-color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.toolbox > *:focus {
+    outline: none;
+}
+
+.toolbox > *:last-child {
+    margin-left: auto;
+}

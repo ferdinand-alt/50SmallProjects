@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 90px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    /* waarom hier een transition? */
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    font-weight: 400;
+    left: 50px;
+    margin: 0;
+    /* eerst is de tekst weg met opacity */
+    opacity: 0;
+}
+
+
+/* Belangrijk ! */
+.panel.active h3 {
+    opacity: 3;
+    transition: opacity 0.9s ease-in 0.7s;
+}
+
+
+.box-1 {
+    background-image: url(https://unsplash.it/600/400/?blur);
+}
+.box-2 {
+    background-image: url(https://unsplash.it/g/600/400);
+}
+.box-3 {
+    background-image: url(https://picsum.photos/600/400?image=1069);
+}
+.box-4 {
+    background-image: url(https://unsplash.it/600/400);
+}
+.box-5 {
+    background-image: url(https://unsplash.it/600/400);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
